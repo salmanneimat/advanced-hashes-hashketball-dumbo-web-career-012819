@@ -109,9 +109,35 @@ def num_points_scored(playername)
   points
 end
 
+require "pry"
 
+def player_by_number(playernumber)
+  number=0
+  
+  
+  game_hash.each do |loc, upper|
+    upper.each do |k, pnames|
+      if k == :players
+        pnames.each do |name, stats|
+          binding.pry
+          if number = playernumber
+            return :number 
+          end
+          
+              if stat == :number
+                number = value
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+    number
+  end
+puts player_by_number(33)
 
-
+binding.pry
 def shoe_size(playername)
   size = 0
   game_hash.each do |loc,upper|
@@ -242,13 +268,3 @@ def big_shoe_rebounds
   splitarray[-1]
 
 end
-
-
-
-
-
-
-
-
-
-
